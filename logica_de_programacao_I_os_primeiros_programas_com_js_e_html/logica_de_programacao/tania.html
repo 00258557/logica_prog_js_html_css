@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+    	function pulaLinha(){
+    		document.write("<br>");
+    	}
+    	function mostra(frase){
+    		document.write(frase);
+    		pulaLinha();
+    	}
+
+    	var parcelas = [10.40, 40.00, 100.18, 200];
+		
+		for(var i = 0; i < parcelas.length; i++) {
+   			 
+   			 mostra(parcelas[i]);
+   			 document.write("<hr>");
+		}
+		
+		document.write("FIM");
+
+</script>

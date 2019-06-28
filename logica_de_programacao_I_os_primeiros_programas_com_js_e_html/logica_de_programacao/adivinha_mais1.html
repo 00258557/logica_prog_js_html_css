@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	
+	var segredos = [5,7,10,2];
+/*Todo array é declarado com colchetes, o famoso [].
+*Podemos, no momento da declaração de um array, adicionar elementos. Esses elementos podem ser de qualquer tipo conhecido do JavaScript:
+*var coisas = ["Gisele", 12, true];*/
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica() {
+
+		var achou = false;
+		for(var posicao = 0; posicao < segredos.length; posicao++){
+		   if (input.value == segredos[posicao]) {
+		
+			    alert("Você acertou!");
+			    achou = true;
+			    break;
+			} 
+		}
+
+		alert("Você errou!!");
+		input.value = "";
+		input.focus();
+	}
+	
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+	
+</script>

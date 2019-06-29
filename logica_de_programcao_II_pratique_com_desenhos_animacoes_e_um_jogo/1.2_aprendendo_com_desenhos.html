@@ -1,0 +1,33 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	/*querySelector chama alguma tag HTML para dentro do mundo JavaScript*/
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	/*Para contrução dos retâgulos, cordenadas de inicio, X e Y. e depois cordenadas de final, X e Y. fill- para preencher o retângulo.*/
+	pincel.fillStyle = "lightgrey"
+	pincel.fillRect(0, 0, 600, 400);
+
+	pincel.fillStyle = "green"
+	pincel.fillRect(0, 0, 200, 400);
+
+	pincel.fillStyle = "red"
+	pincel.fillRect(400, 0, 200, 400)
+
+	/*Para fazer um triângulo, usa beginPath-para inicio onde o pincel começa , moveTo- mover para outro ponto, lineTo- linha para próximo
+	ponto , e fill- para preencher o campo ordenado.*/
+	pincel.fillStyle = "yellow"
+	pincel.beginPath();
+	pincel.moveTo(300, 200);
+	pincel.lineTo(200, 400);
+	pincel.lineTo(400, 400);
+	pincel.fill();
+
+	/*Para a construção do círculo, X e Y inicial, tamanho, angulo inicial, radianos.*/
+	pincel.fillStyle = "blue"
+	pincel.beginPath();
+	pincel.arc(300, 200, 50, 0, 2 * 3.14);
+
+</script>

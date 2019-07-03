@@ -27,8 +27,8 @@
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
 
-        if((x >= 290 && x <= 310) && (y >=190 && y <= 210)){
-        alert("O click foi realizado no centro do alvo");
+        if((x > 300 - raio && x < 300 + raio) && (y > 200 - raio && y < 200 + raio)){
+        alert("Acertou!!");
         }
     }
     tela.onclick = dispara;

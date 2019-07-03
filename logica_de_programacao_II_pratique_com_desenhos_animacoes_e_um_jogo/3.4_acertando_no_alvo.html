@@ -27,9 +27,10 @@
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
 
-       // lógica de acerto?
+        if((x >= 290 && x <= 310) && (y >=190 && y <= 210)){
+        alert("O click foi realizado no centro do alvo");
+        }
     }
-
     tela.onclick = dispara;
 
 </script>

@@ -40,7 +40,20 @@
     setInterval(atualizaTela, 20);
     
     function leDoTeclado(evento){
-        // sabemos que é através de evento.keyCode que temos acesso ao código da tecla pressionada
+        
+        if(evento.keyCode == cima){
+           
+            y = y - taxa;
+        } else if (evento.keyCode ==  baixo){
+            
+            y = y + taxa;
+        }else if(evento.keyCode == esquerda){
+           
+            x = x - taxa;
+        }else if(evento.keyCode == direita){
+            
+            x = x + taxa;
+        }
     }
     document.onkeydown = leDoTeclado;
 
